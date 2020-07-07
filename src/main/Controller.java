@@ -1,7 +1,6 @@
 package main;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -35,6 +34,8 @@ public class Controller implements Initializable {
     public ListView<CheckBox> folderList = new ListView<>();
     public TextField folderEntryField;
     public GridPane grid;
+
+    public String DUMMYREMOVEME;
 
     // Lists of the folders that we will copy to, along with corresponding checkboxes,
     private ArrayList<CheckBox> folderCheckBoxes;
