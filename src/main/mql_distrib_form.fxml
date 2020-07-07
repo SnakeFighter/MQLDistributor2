@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane id="grid" fx:id="grid" alignment="BASELINE_LEFT" hgap="10" layoutY="3.0" prefHeight="500.0" prefWidth="400.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="200.0" prefWidth="500.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints valignment="BOTTOM" vgrow="NEVER" />
+      <RowConstraints maxHeight="1.7976931348623157E308" valignment="BOTTOM" vgrow="NEVER" />
+      <RowConstraints maxHeight="260.0" vgrow="ALWAYS" />
+      <RowConstraints vgrow="NEVER" />
+      <RowConstraints minHeight="100.0" valignment="BOTTOM" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" valignment="BOTTOM" vgrow="NEVER" />
+   </rowConstraints>
+   <children>
+      <AnchorPane>
+         <children>
+            <TextField id="folderEntryField" fx:id="folderEntryField" layoutY="31.0" onAction="#folderLocationEntryAction" onInputMethodTextChanged="#folderLocationEntryAction" promptText="Enter Data Root Folder" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label contentDisplay="BOTTOM" text="Terminal Folder:" AnchorPane.topAnchor="0.0" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+      <Label id="bottomLabel" fx:id="bottomLabel" text="Please stand by..." GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER" />
+      <GridPane gridLinesVisible="true" GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="expertsPanel" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Experts" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Label fx:id="indicatorsPanel" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="27.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Indicators" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="scriptsPanel" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Scripts" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+            <Label fx:id="libraryPanel" alignment="CENTER" layoutX="95.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Library" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="includePanel" alignment="CENTER" layoutX="95.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Include" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+         </children>
+      </GridPane>
+      <ListView fx:id="folderList" prefHeight="20.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></ListView>
+      <Label text="Select Target Folders:" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+      <Label text="Drag over to copy:" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
