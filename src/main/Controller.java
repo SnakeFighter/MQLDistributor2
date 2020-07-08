@@ -631,6 +631,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.Dragboard;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -644,6 +645,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -679,6 +681,11 @@ public class Controller implements Initializable {
         setupFolderList();
     }
 
+    // Need three event listeners for the folder entry field to avoid param mismatch exceptions.
+    public void folderLocationKeyRelease(KeyEvent event) {
+        checkFolderLocationIsOk();
+        setupFolderList();
+    }
 
     /**
      * React to user entry in the folder location.

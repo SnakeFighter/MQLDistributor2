@@ -635,7 +635,6 @@ public class MQLDistributor2 extends Application {
 
     @Override
     public void start(final Stage primaryStage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("main/mql_distrib_form.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("mql_distrib_form.fxml"));
         primaryStage.setTitle("MQL Distributor");
         primaryStage.setScene(new Scene(root));

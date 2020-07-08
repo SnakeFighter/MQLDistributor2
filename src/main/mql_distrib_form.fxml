@@ -646,7 +646,7 @@
    <children>
       <AnchorPane>
          <children>
-            <TextField id="folderEntryField" fx:id="folderEntryField" layoutY="31.0" onAction="#folderLocationEntryAction" onInputMethodTextChanged="#folderLocationEntryAction" promptText="Enter Data Root Folder" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <TextField id="folderEntryField" fx:id="folderEntryField" layoutY="31.0" onAction="#folderLocationEntryAction" onKeyReleased="#folderLocationKeyRelease" promptText="Enter Data Root Folder" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Label contentDisplay="BOTTOM" text="Terminal Folder:" AnchorPane.topAnchor="0.0" />
          </children>
          <GridPane.margin>
